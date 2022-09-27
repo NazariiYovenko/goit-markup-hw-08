@@ -559,8 +559,22 @@ a {
 
 .portfolio__menu {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-bottom: 40px;
+  row-gap: 15px;
+  column-gap: 8px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio__menu {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__menu {
+    margin-bottom: 50px;
+  }
 }
 
 .menu__button {
@@ -576,31 +590,43 @@ a {
   text-align: center;
   transition: background-color var(--main-transition), box-shadow var(--main-transition), color var(--main-transition);
 }
+@media screen and (min-width: 768px) {
+  .menu__button {
+    padding: 6px 25px;
+  }
+}
 .menu__button:hover, .menu__button:focus {
   background-color: var(--accent);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   color: var(--invert-text-color);
 }
 
-.menu__item:not(:last-child) {
-  margin-right: 8px;
-}
-
-.card-set {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: calc(-1 * var(--card-set-gap));
-  margin-bottom: calc(-1 * var(--card-set-gap));
+@media screen and (min-width: 768px) {
+  .card-set {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .card-set__card {
-  flex-basis: calc(33.3333333333% - var(--card-set-gap));
-  margin-right: var(--card-set-gap);
-  margin-bottom: var(--card-set-gap);
+  width: 100%;
+  margin-bottom: 30px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   transition: box-shadow var(--main-transition);
+}
+@media screen and (min-width: 768px) {
+  .card-set__card {
+    width: calc((100% - 30px) / 2);
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-set__card {
+    width: calc((100% - 60px) / 3);
+  }
 }
 .card-set__card:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -637,12 +663,29 @@ a {
   top: 0;
   color: var(--invert-text-color);
   background: rgba(33, 150, 243, 0.9);
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.56;
   letter-spacing: 0.03em;
-  padding: 63px 24px;
+  height: 100%;
+  padding: 55px 20px;
   transform: translateY(100%);
   transition: transform var(--main-transition);
+}
+@media screen and (min-width: 480px) {
+  .card-set__hidden-text {
+    padding: 77px 24px;
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card-set__hidden-text {
+    padding: 49px 24px 77px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-set__hidden-text {
+    padding: 63px 24px;
+  }
 }
 
 .overlay {
