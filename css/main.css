@@ -266,7 +266,7 @@ a {
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  bottom: -4px;
+  bottom: 0;
   left: 0;
   background-color: var(--accent);
 }
@@ -670,6 +670,7 @@ a {
 }
 
 .card__photo {
+  display: block;
   margin-bottom: 30px;
 }
 
@@ -1106,15 +1107,36 @@ a {
   background-color: var(--footer-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer {
+    text-align: left;
+  }
 }
 
-.footer__container {
-  display: flex;
-  align-items: baseline;
+@media screen and (min-width: 768px) {
+  .footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+  }
 }
 
 .contact-information {
-  margin-right: 70px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .contact-information {
+    margin-right: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact-information {
+    margin-bottom: 0;
+    margin-right: 70px;
+  }
 }
 
 .footer__logo {
@@ -1131,7 +1153,7 @@ a {
 }
 
 .address__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
 .address__link {
@@ -1147,7 +1169,13 @@ a {
 }
 
 .social {
-  margin-right: 93px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .social {
+    margin-bottom: 0;
+    margin-right: 93px;
+  }
 }
 
 .social__title {
@@ -1161,6 +1189,7 @@ a {
 
 .social__list {
   display: flex;
+  justify-content: center;
 }
 
 .social__icon-box {
@@ -1200,7 +1229,18 @@ a {
 }
 
 .subscribe-form {
-  display: flex;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .subscribe-form {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscribe-form {
+    width: 570px;
+    display: flex;
+  }
 }
 
 .subscribe-wrap__title {
@@ -1215,15 +1255,15 @@ a {
 }
 
 .subscribe-form__mail {
-  width: 358px;
   height: 50px;
+  width: 100%;
   outline: none;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: transparent;
   padding: 15px 15px;
-  margin-right: 12px;
+  margin-bottom: 20px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
@@ -1231,11 +1271,18 @@ a {
   color: rgba(255, 255, 255, 0.6);
   transition: border var(--main-transition);
 }
+@media screen and (min-width: 1200px) {
+  .subscribe-form__mail {
+    margin-right: 12px;
+  }
+}
 .subscribe-form__mail:focus {
   border: 1px solid var(--accent);
 }
 
 .subscribe-form__button {
+  margin: 0 auto;
+  height: 50px;
   display: flex;
   align-items: center;
   background-color: var(--accent);
