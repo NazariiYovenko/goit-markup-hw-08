@@ -1044,16 +1044,26 @@ a {
   margin-bottom: 30px;
 }
 
-.checkbox__text,
-.checkbox__offer-link {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--primary-text-color);
+.checkbox__text {
   display: flex;
   justify-content: center;
   align-items: baseline;
+}
+
+.checkbox__text,
+.checkbox__offer-link {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .checkbox__text,
+.checkbox__offer-link {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox__icon-wrap {
@@ -1064,7 +1074,7 @@ a {
   height: 15px;
   border: 2px solid #303030;
   border-radius: 2px;
-  margin-right: 10px;
+  margin-right: 8px;
   transition: background-color var(--main-transition), border var(--main-transition);
 }
 
