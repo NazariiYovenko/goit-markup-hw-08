@@ -135,6 +135,9 @@
 
   font-weight: 500;
   font-size: 12px;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
   line-height: 1.2;
   letter-spacing: 0.02em;
 
@@ -209,7 +212,7 @@
   font-size: 34px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: var(--primary-text-color);
+  color: var(--accent);
   transition: color var(--main-transition);
   @media screen and (max-width: 479px) {
     font-size: 24px;
@@ -244,7 +247,7 @@
     font-size: 18px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    color: var(--primary-text-color);
+    color: var(--accent);
     text-decoration: none;
     transition: color var(--main-transition);
 

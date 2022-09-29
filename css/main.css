@@ -283,6 +283,11 @@ a {
   letter-spacing: 0.02em;
   transition: color var(--main-transition);
 }
+@media screen and (min-width: 1200px) {
+  .contact-nav__link {
+    font-size: 14px;
+  }
+}
 .contact-nav__link:hover, .contact-nav__link:focus {
   color: var(--accent);
 }
@@ -349,7 +354,7 @@ a {
   font-size: 34px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: var(--primary-text-color);
+  color: var(--accent);
   transition: color var(--main-transition);
 }
 @media screen and (max-width: 479px) {
@@ -390,7 +395,7 @@ a {
   font-size: 18px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: var(--primary-text-color);
+  color: var(--accent);
   text-decoration: none;
   transition: color var(--main-transition);
 }
