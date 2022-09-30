@@ -90,7 +90,10 @@
 .checkbox__text {
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
+  @media screen and (min-width: 1200px) {
+    align-items: baseline;
+  }
 }
 
 .checkbox__text,
